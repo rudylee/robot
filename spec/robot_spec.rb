@@ -66,7 +66,7 @@ describe "robot" do
 
   it 'should output the information about the robot' do
     robot.put(3, 3, :WEST)
-    output = '3, 3, WEST' 
+    output = '3,3,WEST' 
     expect(robot.report).to eq output
   end
 end
