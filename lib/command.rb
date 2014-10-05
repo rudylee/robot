@@ -2,12 +2,12 @@ require 'robot.rb'
 require 'table.rb'
 
 class Command
-  def initialize(filename, table_width, table_height)
-    if ARGV.empty?
+  def initialize(args, table_width, table_height)
+    if args.empty?
       abort "Please provide command file"
     end
 
-    @file = open_file(ARGV.first)
+    @file = open_file(args.first)
     @table = Table.new(table_width, table_height)
     @robot = Robot.new
   end
@@ -36,6 +36,7 @@ class Command
     @file.close
   end
 
+  private
   # Open the command file and abort if file is not exist
   def open_file(filename)
     unless File.file?(filename) 
