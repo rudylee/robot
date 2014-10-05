@@ -48,7 +48,7 @@ class Robot
 
   # Output the last position of the robot
   def report
-    @x.to_s << ', ' << @y.to_s << ', ' << @directions.first.to_s
+    @x.to_s << ',' << @y.to_s << ',' << @directions.first.to_s
   end
 
   private
