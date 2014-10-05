@@ -2,14 +2,14 @@
 
 Start with
 
-  ./bin/robot.rb <command_file>
+    ./bin/robot.rb <command_file>
 
 Example
   
-  ./bin/robot.rb first_data
+    ./bin/robot.rb first_data
 
 Run this to run Rspec tests
   
-  rspec spec
+    rspec spec
 
 
