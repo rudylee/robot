@@ -1,5 +1,5 @@
 class Robot
-  attr_accessor :on_table, :x, :y, :directions
+  attr_reader :on_table, :x, :y, :directions
 
   def initialize
     @directions = [:NORTH, :EAST, :SOUTH, :WEST]
