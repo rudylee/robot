@@ -6,6 +6,7 @@ class Robot
     @on_table = false
   end
 
+  # Put the robot on the table 
   def put(x, y, facing)
     @x = x
     @y = y
@@ -13,7 +14,7 @@ class Robot
     set_direction(facing)
   end
 
-  # Rotate directions array based on direction
+  # Rotate directions array based on direction parameter
   def rotate(direction)
     rotation = 1
     if direction == :LEFT 
@@ -40,7 +41,7 @@ class Robot
     pos
   end
 
-  # Move the robot according to hash position
+  # Move the robot according to hash position parameter
   def move(pos)
     @x = pos[:x]
     @y = pos[:y]
