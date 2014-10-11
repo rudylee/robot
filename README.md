@@ -22,13 +22,11 @@ rspec => 3.1.5
 
 1. Make sure you have Ruby installed on your machine
 
-
     ruby -v
 
 2. If you don't have Ruby, I recommend [RVM](http://rvm.io/) for Mac and Linux. On Windows, you can try [Ruby Installer](http://rubyinstaller.org/)
 
 3. Clone the project from Github
-
 
     git clone https://github.com/rudylee/robot.git
 
@@ -46,17 +44,15 @@ Example
 
 1. Make sure you have RSpec => 3.1.5 installed on your machine
 
-
     rspec -v
 
 2. Run this command to run the tests
-  
 
     rspec spec
 
 ## Overview
 
-This application is divided into 3 main classes: Robot, Table and Command.
+This application has 3 main classes: Robot, Table and Command.
 
 ## License
 
