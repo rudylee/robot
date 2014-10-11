@@ -44,11 +44,11 @@ Example
 
 1. Make sure you have RSpec => 3.1.5 installed on your machine
 
-    rspec -v
+      rspec -v
 
 2. Run this command to run the tests
   
-    rspec spec
+      rspec spec
 
 ## Overview
 

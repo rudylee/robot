@@ -1,5 +1,5 @@
 class Robot
-  attr_reader :on_table
+  attr_reader :on_table, :x, :y, :directions
 
   def initialize
     @directions = [:NORTH, :EAST, :SOUTH, :WEST]
@@ -11,7 +11,9 @@ class Robot
     @x = x
     @y = y
     @on_table = true
-    set_direction(facing)
+
+    index = @directions.index(facing)
+    @directions = @directions.rotate(index)
   end
 
   # Rotate directions array based on direction parameter
@@ -50,13 +52,5 @@ class Robot
   # Output the last position of the robot
   def report
     @x.to_s << ',' << @y.to_s << ',' << @directions.first.to_s
-  end
-
-  private
-
-  # Initialize facing direction
-  def set_direction(direction)
-    index = @directions.index(direction)
-    @directions = @directions.rotate(index)
   end
 end
