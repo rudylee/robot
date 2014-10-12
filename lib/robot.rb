@@ -52,13 +52,14 @@ class Robot
   end
 
   private 
+
   def get_direction(facing, rotation = 0)
     directions = [:NORTH, :EAST, :SOUTH, :WEST]
 
-    # Get the index of the facing direction
+    # Get the index of the direction
     index = directions.index(facing)
 
-    # Rotate directions hash twice 
+    # Rotate directions hash twice to get final result
     directions.rotate(index).rotate(rotation).first
   end
 end
