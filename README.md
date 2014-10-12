@@ -85,25 +85,27 @@ Run this command to run the tests
 
 ## Overview
 
-The architecture of this application is really simple. It consists of 3 main classes: Robot, Table and Command.
+This application consists of 3 main classes: Command, Table and Robot. 
 
 ### Command 
 
-Command class is responsible to parse command file and send the instructions to Robot class. 
+Command class is responsible to parse command file and send the instructions to Robot object. 
 
-It will also use Table class to check the validity of a position before moving or placing the robot.
+It will also use Table object to check the validity of a position before moving or placing the robot.
+
+The object of this class is initiated inside bin/robot.rb file.
 
 ### Table
 
-Table class represents the virtual table in this application. It has a method to check the validity of x-y position. The validation method is being used by command class before performing any movement or placement for the robot. 
+Table class represents the virtual table in this application. It has a method to check the validity of x-y position. This validation method is being used by command class before performing any movement or placement of the robot. 
 
 ### Robot
 
-This class consists of methods to perform all the commands such as rotate, move and put. 
+Robot class represents the robot in this application. It can perform all the commands such as rotate, move and put. The object of this class is initiated inside Command object.
 
 ### Improvement
 
-There are few places I think need some improvements. The first one is the spec for command class. I believe it is better to use mock inside the spec for robot and table classes.
+There are a few places I think need some improvements. The first one is the spec for command class. I believe it is better to use mock inside the spec for robot and table classes.
 
 The next one is get_direction method inside robot class. I think there should be better way to rotate the hash.
 
