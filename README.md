@@ -20,13 +20,13 @@ rspec => 3.1.5
 
 ## How to Install
 
-1. Make sure you have Ruby installed on your machine
+Make sure you have Ruby installed on your machine
 
     ruby -v
 
-2. If you don't have Ruby, I recommend [RVM](http://rvm.io/) for Mac and Linux. On Windows, you can try [Ruby Installer](http://rubyinstaller.org/)
+If you don't have Ruby, I recommend [RVM](http://rvm.io/) for Mac and Linux. On Windows, you can try [Ruby Installer](http://rubyinstaller.org/)
 
-3. Clone the project from Github
+Clone the project from Github
 
     git clone https://github.com/rudylee/robot.git
 
@@ -75,36 +75,39 @@ Example
 
 ## Testing Instructions
 
-1. Make sure you have RSpec => 3.1.5 installed on your machine
+Make sure you have RSpec => 3.1.5 installed on your machine
 
     rspec -v
 
-2. Run this command to run the tests
+Run this command to run the tests
 
     rspec spec
 
 ## Overview
 
-This application has 3 main classes: Robot, Table and Command.
+The architecture of this application is really simple. It consists of 3 main classes: Robot, Table and Command.
 
 ### Command 
 
 Command class is responsible to parse command file and send the instructions to Robot class. 
 
-It will use Table class to check the validity of a position before moving or placing the robot.
+It will also use Table class to check the validity of a position before moving or placing the robot.
 
 ### Table
 
-Table class only has one method to check the validity of x-y position. This method is being used by command class before performing any movement or placement.
+Table class represents the virtual table in this application. It has a method to check the validity of x-y position. The validation method is being used by command class before performing any movement or placement for the robot. 
 
 ### Robot
 
-The core class of this application. 
+This class consists of methods to perform all the commands such as rotate, move and put. 
+
+### Improvement
+
+There are few places I think need some improvements. The first one is the spec for command class. I believe it is better to use mock inside the spec for robot and table classes.
+
+The next one is get_direction method inside robot class. I think there should be better way to rotate the hash.
 
 ## License
 
 Licensed under the GNU Lesser General Public License
-
-## Contributing
-
 
