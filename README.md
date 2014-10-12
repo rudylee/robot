@@ -105,7 +105,7 @@ Robot class represents the robot in this application. It can perform all the com
 
 ### Improvement
 
-There are a few places I think need some improvements. The first one is the spec for command class. I believe it is better to use mock inside the spec for robot and table classes.
+There are a few places I think need some improvements. The first one is the spec for command class. I believe it is better to use mock inside the spec for robot and table classes. However, I am not sure whether it will bring any benefits to the test.
 
 The next one is get_direction method inside robot class. I think there should be better way to rotate the hash.
 
