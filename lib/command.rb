@@ -19,24 +19,28 @@ class Command
       # Ignore the command if robot is not on the table
       if !@robot.on_table and command[0] != "PLACE" then next end
 
-      case command[0]
-      when "PLACE"
-        place(command[1])
-      when "LEFT"
-        @robot.rotate(:LEFT)
-      when "RIGHT"
-        @robot.rotate(:RIGHT)
-      when "MOVE"
-        next_pos = @robot.next_pos
-        if @table.valid_pos?(next_pos) then @robot.move(next_pos) end
-      when "REPORT"
-        puts @robot.report
-      end
+      # Process command
+      process_command(command)
     end
     @file.close
   end
 
   private
+  def process_command(command)
+    case command[0]
+    when "PLACE"
+      place(command[1])
+    when "LEFT"
+      @robot.rotate(:LEFT)
+    when "RIGHT"
+      @robot.rotate(:RIGHT)
+    when "MOVE"
+      next_pos = @robot.next_pos
+      if @table.valid_pos?(next_pos) then @robot.move(next_pos) end
+    when "REPORT"
+      puts @robot.report
+    end
+  end
   # Open the command file and abort if file is not exist
   def open_file(filename)
     unless File.file?(filename) 
