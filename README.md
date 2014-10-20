@@ -18,7 +18,7 @@ Won't support Ruby < 1.9.3
 
 ruby => 1.9.3 
 
-rspec => 3.1.5
+rspec ~> 3.1.0
 
 ## How to Install
 
@@ -77,7 +77,7 @@ Example
 
 ## Testing Instructions
 
-Make sure you have RSpec => 3.1.5 installed on your machine
+Make sure you have RSpec ~> 3.1.0 installed on your machine
 
     rspec -v
 
